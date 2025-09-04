@@ -3,9 +3,9 @@ import React from "react";
 function ToDoItem() {
   return (
     <>
-      <div className="flex flex-row items-center justify-center gap-32">
+      <div className="flex flex-row items-center justify-center gap-28">
         <p>Example Task</p>
-        <section>
+        <section className="flex gap-2">
           <button>Edit</button>
           <button>Delete</button>
         </section>
