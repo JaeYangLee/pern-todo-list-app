@@ -10,17 +10,20 @@ function ToDoItem({ todos, onUpdate, onDelete }) {
   return (
     <>
       <li className="flex flex-row justify-between w-full p-2 py-4 text-sm border-black border-b-1">
-        <span>{todos.description}</span>
+        <section className="flex gap-2">
+          <input type="checkbox" />
+          <span className="truncate w-[50vw]">{todos.description}</span>
+        </section>
         <section className="flex gap-2">
           <button
             onClick={handleEdit}
-            className="px-2 border-black border-1 bg-[#99b7dd]"
+            className="px-2 border-black border-1 bg-[#99b7dd] shadow-[2px_2px_0px_0px_rgba(0,0,0,0.75)] hover:bg-[#7a92b1]"
           >
             Edit
           </button>
           <button
             onClick={() => onDelete(todos.todo_id)}
-            className="px-2 border-black border-1 bg-[#E97A54]"
+            className="px-2 border-black border-1 bg-[#E97A54] shadow-[2px_2px_0px_0px_rgba(0,0,0,0.75)] hover:bg-[#ba6243]"
           >
             Delete
           </button>

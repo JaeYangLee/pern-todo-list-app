@@ -7,7 +7,6 @@ import "./index.css";
 
 function App() {
   const [todos, setTodos] = useState([]);
-  const [newTodo, setNewTodo] = useState("");
 
   //fetch todos when component loads
   useEffect(() => {
@@ -58,7 +57,7 @@ function App() {
   };
   return (
     <>
-      <main className="flex flex-col h-screen bg-[#ffedd6]">
+      <main className="flex flex-col min-h-screen bg-[#ffedd6]">
         <ToDoForm onAdd={addTodo} />
         <ToDoList todos={todos} onUpdate={updateTodo} onDelete={deleteTodo} />
       </main>

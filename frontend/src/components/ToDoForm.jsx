@@ -36,13 +36,13 @@ function ToDoForm({ onAdd }) {
           <div className="flex flex-row gap-4 px-2 py-2 text-sm">
             <button
               type="submit"
-              className="px-2 text-sm border-black border-1 "
+              className="px-2 text-sm border-black border-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.75)] hover:bg-[#ccbeab]"
             >
               Add
             </button>
             <button
               onClick={handleResetInput}
-              className="px-2 text-sm border-black border-1"
+              className="px-2 text-sm border-black border-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.75)] hover:bg-[#ccbeab]"
             >
               Clear
             </button>
