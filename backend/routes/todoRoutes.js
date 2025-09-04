@@ -5,15 +5,15 @@ const router = express.Router();
 // Defining routes
 
 // Get all todos
-router.get("/todos", todoController.getTodos);
+router.get("/", todoController.getTodos);
 
 // Add todos
-router.get("/todos", todoController.addTodo);
+router.post("/", todoController.addTodo);
 
 // Update todos
-router.get("/todos/:id", todoController.updateTodo);
+router.put("/:id", todoController.updateTodo);
 
 // Delete todos
-router.get("/todos/:id", todoController.deleteTodo);
+router.delete("/:id", todoController.deleteTodo);
 
 module.exports = router;
