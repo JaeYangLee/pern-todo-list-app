@@ -5,9 +5,9 @@ function ToDoList({ todos = [], onUpdate, onDelete }) {
   return (
     <>
       <ul className="flex flex-col items-center justify-between w-screen h-full p-2 bg-gray-200 border-transparent rounded-2xl">
-        {todos.map((todo) => (
+        {todos.map((todos) => (
           <ToDoItem
-            key={todo.todo_id}
+            key={todos.todo_id}
             todos={todos}
             onUpdate={onUpdate}
             onDelete={onDelete}
