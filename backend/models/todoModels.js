@@ -23,13 +23,14 @@ const updateTodo = async (id, description) => {
     "UPDATE todos SET description = $1 WHERE todo_id = $2 RETURNING *",
     [description, id]
   );
-  return results.rows[0]; // return updated todo
+  return result.rows[0]; // return updated todo
 };
 
 //Delete a todo
 const deleteTodo = async (id) => {
   const result = await pool.query(
-    "DELETE FROM todos WHERE todo_id = $1 RETURNING *"
+    "DELETE FROM todos WHERE todo_id = $1 RETURNING *",
+    [id]
   );
   return result.rows[0]; //return deleted todo
 };
