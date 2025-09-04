@@ -12,7 +12,7 @@ function ToDoForm() {
             <input
               type="text"
               placeholder="Enter your task..."
-              className="p-2 border-black border-1 rounded-2xl"
+              className="p-2 bg-white border-black border-1 rounded-2xl"
             />
           </div>
           <div className="flex flex-row items-center justify-between gap-4 p-2">
