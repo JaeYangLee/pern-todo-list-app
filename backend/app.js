@@ -10,11 +10,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Routes
-app.use("/api", todoRoutes);
-
-//Health check route or the Home page
-app.use("/", (req, res) => {
-  res.send("To do API is running!");
-});
+app.use("/todos", todoRoutes);
 
 module.exports = app;
