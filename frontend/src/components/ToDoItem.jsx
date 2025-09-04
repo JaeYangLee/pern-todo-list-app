@@ -1,15 +1,21 @@
 import React from "react";
 
-function ToDoItem() {
+function ToDoItem({ todos, onUpdate, onDelete }) {
+  const handleEdit = () => {
+    const newDescription = prompt("Edit task:", todo.description);
+    if (newDescription) {
+      onUpdate(todos.todo_id, newDescription);
+    }
+  };
   return (
     <>
-      <div className="flex flex-row items-center justify-center gap-28">
-        <p>Example Task</p>
+      <li className="flex flex-row items-center justify-center gap-28">
+        <span>{todos.description}</span>
         <section className="flex gap-2">
-          <button>Edit</button>
-          <button>Delete</button>
+          <button onClick={handleEdit}>Edit</button>
+          <button onClick={() => onDelete(todos.todo_id)}>Delete</button>
         </section>
-      </div>
+      </li>
     </>
   );
 }
