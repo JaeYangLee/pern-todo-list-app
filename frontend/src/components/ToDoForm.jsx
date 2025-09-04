@@ -19,33 +19,30 @@ function ToDoForm({ onAdd }) {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-full px-4 font-sans bg-gray-500 border-transparent rounded-2xl">
-        <header className="p-2">
-          <h1>PERN To Do List</h1>
+      <div className="flex flex-col items-start justify-start font-mono bg-[#ffedd6] border-b-1 border-black py-2">
+        <header className="flex flex-col items-start justify-start p-2">
+          <h1 className="text-2xl font-bold">TO DO LIST</h1>
         </header>
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col items-center justify-center gap-2"
-        >
+        <form onSubmit={handleSubmit} className="flex flex-col gap-2 p-1">
           <div>
             <input
               type="text"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Enter your task..."
-              className="p-2 bg-white border-black border-1 rounded-2xl"
+              className="w-[60vw] text-sm px-2 py-1 bg-[#ffedd6] border-black border-1"
             />
           </div>
-          <div className="flex flex-row items-center justify-between gap-4 p-2">
+          <div className="flex flex-row gap-4 px-2 py-2 text-sm">
             <button
               type="submit"
-              className="px-2 border-black border-1 rounded-2xl"
+              className="px-2 text-sm border-black border-1 "
             >
               Add
             </button>
             <button
               onClick={handleResetInput}
-              className="px-2 border-black border-1 rounded-2xl"
+              className="px-2 text-sm border-black border-1"
             >
               Clear
             </button>

@@ -58,7 +58,7 @@ function App() {
   };
   return (
     <>
-      <main className="flex flex-col items-center w-screen h-screen gap-2 px-4 ">
+      <main className="flex flex-col h-screen bg-[#ffedd6]">
         <ToDoForm onAdd={addTodo} />
         <ToDoList todos={todos} onUpdate={updateTodo} onDelete={deleteTodo} />
       </main>
