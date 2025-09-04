@@ -32,11 +32,11 @@ const updateTodo = async (req, res) => {
     const { description } = req.body;
     const updatedTodo = await todoModel.updateTodo(id, description);
 
-    if (!updateTodo) {
+    if (!updatedTodo) {
       return res.status(400).json({ message: "Todo not found..." });
     }
 
-    res.json(updateTodo);
+    res.json(updatedTodo);
   } catch (err) {
     console.error("Error Updating Todos:", err.message);
     res.status(500).json({ error: "Server Error" });
@@ -51,6 +51,8 @@ const deleteTodo = async (req, res) => {
 
     if (!deletedTodo) {
       return res.status(400).json({ message: "Todo not found..." });
+    } else {
+      return res.status(200).json({ message: "Todo deleted..." });
     }
   } catch (err) {
     console.error("Error Deleting Todos:", err.message);
