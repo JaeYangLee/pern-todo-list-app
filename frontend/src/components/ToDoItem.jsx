@@ -9,7 +9,7 @@ function ToDoItem({ todos, onUpdate, onDelete }) {
   };
   return (
     <>
-      <li className="flex flex-row justify-between w-full p-2 py-4 text-sm border-black border-b-1">
+      <li className="flex flex-row justify-between w-full p-2 py-4 text-sm border-black border-b-1 lg:text-lg">
         <section className="flex gap-2">
           <input type="checkbox" />
           <span className="truncate w-[50vw]">{todos.description}</span>
