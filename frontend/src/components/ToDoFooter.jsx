@@ -5,7 +5,7 @@ function ToDoFooter() {
     <>
       <footer className="flex items-center justify-center w-full px-4 py-2 font-mono bg-black md:justify-between">
         <section>
-          <p className="text-[8px] text-white lg:text-base">
+          <p className="text-[8px] text-white lg:text-lg xl:text-2xl">
             © 2025 Jian Lee Ramos. All rights reserved.
           </p>
         </section>
