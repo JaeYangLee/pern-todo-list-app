@@ -52,7 +52,7 @@ function App() {
       await axios.delete(`http://localhost:5000/todos/${id}`);
       setTodos(todos.filter((todos) => todos.todo_id !== id));
     } catch (err) {
-      console.error("Updating deleting todo:", err.message);
+      console.error("Error Deleting Todo:", err.message);
     }
   };
   return (
