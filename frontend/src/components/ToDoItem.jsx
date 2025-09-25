@@ -9,10 +9,15 @@ function ToDoItem({ todos, onUpdate, onDelete }) {
   };
   return (
     <>
-      <li className="flex flex-row justify-between w-full p-2 py-4 text-sm border-black border-b-1 lg:text-lg">
-        <section className="flex gap-2">
-          <input type="checkbox" />
-          <span className="truncate w-[50vw]">{todos.description}</span>
+      <li className="flex flex-row justify-between w-full p-2 py-4 text-sm border-black border-b-1 lg:text-lg ">
+        <section className="flex gap-2 items-center justify-center">
+          <input
+            type="checkbox"
+            className="peer appearance-none w-4 h-4 border-2 rounded checked:bg-[#82ddad]"
+          />
+          <span className="truncate w-[50vw] peer-checked:line-through">
+            {todos.description}
+          </span>
         </section>
         <section className="flex gap-2">
           <button

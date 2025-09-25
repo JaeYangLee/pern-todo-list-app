@@ -27,6 +27,7 @@ function ToDoForm({ onAdd }) {
         <form onSubmit={handleSubmit} className="flex flex-col gap-2 p-1">
           <div>
             <input
+              required
               type="text"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
