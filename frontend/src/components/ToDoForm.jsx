@@ -20,7 +20,7 @@ function ToDoForm({ onAdd }) {
     <>
       <div className="flex flex-col items-start justify-start font-mono bg-[#ffedd6] border-b-1 border-black py-2 lg:p-3 xl:p-4">
         <header className="flex flex-col items-start justify-start p-2">
-          <h1 className="text-2xl font-bold lg:text-5xl xl:text-5xl">
+          <h1 className="text-2xl font-bold select-none lg:text-5xl xl:text-5xl">
             TO DO LIST
           </h1>
         </header>
