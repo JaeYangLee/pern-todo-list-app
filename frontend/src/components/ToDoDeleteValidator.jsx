@@ -1,7 +1,11 @@
 import React from "react";
 
 function ToDoDeleteValidator({}) {
-  return <></>;
+  return (
+    <>
+      <h1>Hello World!</h1>
+    </>
+  );
 }
 
 export default ToDoDeleteValidator;
