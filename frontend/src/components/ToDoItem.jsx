@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import ToDoDeleteValidator from "./ToDoDeleteValidator";
 
 function ToDoItem({ todos, onUpdate, onDelete }) {
+  const [isDeleteValidatorOpen, setDeleteValidatorClose] = useState(false);
   const handleEdit = () => {
     const newDescription = prompt("Edit task:", todos.description);
     if (newDescription) {
@@ -27,13 +29,18 @@ function ToDoItem({ todos, onUpdate, onDelete }) {
             Edit
           </button>
           <button
-            onClick={() => onDelete(todos.todo_id)}
+            onClick={() => setDeleteValidatorClose(true)}
             className="px-2 border-black border-1 bg-[#E97A54] shadow-[2px_2px_0px_0px_rgba(0,0,0,0.75)] hover:bg-[#ba6243]"
           >
             Delete
           </button>
         </section>
       </li>
+      <ToDoDeleteValidator
+        isDeleteValidatorOpen={isDeleteValidatorOpen}
+        onDeleteValidatorClose={() => setDeleteValidatorClose(false)}
+        onDelete={() => onDelete(todos.todo_id)}
+      />
     </>
   );
 }
