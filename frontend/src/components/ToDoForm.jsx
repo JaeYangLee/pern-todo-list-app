@@ -3,7 +3,6 @@ import React, { useState } from "react";
 function ToDoForm({ onAdd }) {
   const [description, setDescription] = useState("");
 
-  // Add todo
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!description.trim()) {

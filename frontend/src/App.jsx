@@ -8,7 +8,6 @@ import "./index.css";
 function App() {
   const [todos, setTodos] = useState([]);
 
-  //fetch todos when component loads
   useEffect(() => {
     fetchTodos();
   }, []);
@@ -22,7 +21,6 @@ function App() {
     }
   };
 
-  // Add a todo
   const addTodo = async (description) => {
     try {
       const res = await axios.post("http://localhost:5000/todos", {
@@ -34,7 +32,6 @@ function App() {
     }
   };
 
-  // Update a todo
   const updateTodo = async (id, description) => {
     try {
       const res = await axios.put(`http://localhost:5000/todos/${id}`, {
@@ -46,7 +43,6 @@ function App() {
     }
   };
 
-  // Delete a todo
   const deleteTodo = async (id) => {
     try {
       await axios.delete(`http://localhost:5000/todos/${id}`);

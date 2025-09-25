@@ -1,8 +1,5 @@
 const todoModel = require("../models/todoModels");
 
-//Controller Methods
-
-//Get all todos
 const getTodos = async (req, res) => {
   try {
     const todos = await todoModel.getAllTodos();
@@ -13,7 +10,6 @@ const getTodos = async (req, res) => {
   }
 };
 
-//Add a new todo
 const addTodo = async (req, res) => {
   try {
     const { description } = req.body;
@@ -25,7 +21,6 @@ const addTodo = async (req, res) => {
   }
 };
 
-//Update a todo
 const updateTodo = async (req, res) => {
   try {
     const { id } = req.params;
@@ -43,7 +38,6 @@ const updateTodo = async (req, res) => {
   }
 };
 
-//Delete a todo
 const deleteTodo = async (req, res) => {
   try {
     const { id } = req.params;
