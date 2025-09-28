@@ -4,7 +4,6 @@ import ToDoFooter from "./components/ToDoFooter";
 import ToDoForm from "./components/ToDoForm";
 import ToDoList from "./components/ToDoList";
 import "./index.css";
-import ToDoDeleteValidator from "./components/ToDoDeleteValidator";
 
 function App() {
   const [todos, setTodos] = useState([]);
